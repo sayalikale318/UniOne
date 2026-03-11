@@ -4,12 +4,20 @@ const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('unione-theme') || 'dark';
+    try {
+      return localStorage.getItem('unione-theme') || 'dark';
+    } catch (e) {
+      return 'dark';
+    }
   });
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('unione-theme', theme);
+    try {
+      localStorage.setItem('unione-theme', theme);
+    } catch (e) {
+      // ignore
+    }
   }, [theme]);
 
   const toggle = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'));
