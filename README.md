@@ -11,7 +11,7 @@ Built with **React** and **Vite**, featuring a completely responsive and custom-
 Follow these steps to set up and run the UniOne platform on your local machine.
 
 ### 1. Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your computer. (Version 18+ is recommended).
+Make sure you have [React](https://react.dev/) installed on your computer. (Version 18+ is recommended).
 
 ### 2. Clone the Repository
 Download the project code to your local machine:
@@ -52,7 +52,11 @@ Once the server starts, open your browser and navigate to the address shown in y
 
 * `/src/pages/LandingPage.jsx` - The main homepage containing hero sections, features, testaments.
 * `/src/components/` - Global components including:
-  * `Navbar.jsx` & `Footer.jsx`
+  * `Navbar.jsx`-Navbar for the redirection.
+  * `Footer.jsx`-
   * `ScrollBanner.jsx` - Dynamic infinite marquee for features
   * `ThemeContext.jsx` - Context provider handling the custom Dark/Light toggling
 * `/src/global.css` - The single source of truth for all styling tokens and component logic.
+
+## 🏃 How To See Work:
+* (https://sayalikale318.github.io/UniOne/)
