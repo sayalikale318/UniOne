@@ -1,16 +1,58 @@
-# React + Vite
+# UniOne Platform 🎓
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Your complete academic platform for engineering students. Free notes, premium packs, AI assistant & more.
 
-Currently, two official plugins are available:
+Built with **React** and **Vite**, featuring a completely responsive and custom-designed dark/light mode landing page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Quick Start Guide
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Follow these steps to set up and run the UniOne platform on your local machine.
 
-## Expanding the ESLint configuration
+### 1. Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your computer. (Version 18+ is recommended).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Clone the Repository
+Download the project code to your local machine:
+```bash
+git clone https://github.com/sayalikale318/UniOne.git
+```
+
+### 3. Navigate into the Project folder
+```bash
+cd UniOne
+```
+
+### 4. Install Dependencies
+Install all the required packages that the project needs to run:
+```bash
+npm install
+```
+
+### 5. Start the Development Server
+Run the project locally:
+```bash
+npm run dev
+```
+
+### 6. View the App ✨
+Once the server starts, open your browser and navigate to the address shown in your terminal (usually `http://localhost:5173/`).
+
+---
+
+## 🛠️ Built With
+
+* **[React 18](https://react.dev/)** - Frontend library for building user interfaces
+* **[Vite](https://vitejs.dev/)** - Lightning fast development build tool
+* **[Framer Motion](https://www.framer.com/motion/)** - Production-ready animations
+* **Plain CSS** - All styling is handled via custom `/src/global.css` with extensive CSS custom variables for dynamic dark/light themes.
+
+## 📁 Project Structure highlights
+
+* `/src/pages/LandingPage.jsx` - The main homepage containing hero sections, features, testaments.
+* `/src/components/` - Global components including:
+  * `Navbar.jsx` & `Footer.jsx`
+  * `ScrollBanner.jsx` - Dynamic infinite marquee for features
+  * `ThemeContext.jsx` - Context provider handling the custom Dark/Light toggling
+* `/src/global.css` - The single source of truth for all styling tokens and component logic.
