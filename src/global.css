@@ -372,18 +372,19 @@ select option { background: var(--surface2); }
   width: fit-content;
 }
 .hero__eyebrow  { font-family: 'DM Sans',sans-serif; font-size: clamp(14px,1.8vw,17px); font-weight: 500; color: var(--text2); letter-spacing: .2px; }
+.hero__content    { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .hero__title    { font-family: 'Syne',sans-serif; font-size: clamp(40px,7vw,76px); font-weight: 800; line-height: 1.1; color: var(--text); letter-spacing: -2px; }
 /* Title accent: blue→purple matching reference gradient */
 .hero__title-accent {
   background: linear-gradient(135deg, var(--accent), var(--purple));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-.hero__subtitle { font-size: clamp(15px,1.8vw,17px); color: var(--text2); line-height: 1.75; max-width: 580px; }
-.hero__feature-list { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.hero__subtitle { font-size: clamp(15px,1.8vw,17px); color: var(--text2); line-height: 1.75; max-width: 620px; }
+.hero__feature-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; margin-left: auto; margin-right: auto; width: fit-content; text-align: left; }
 .hero__feature-list li { font-size: clamp(14px, 1.6vw, 15px); color: var(--text); display: flex; align-items: flex-start; gap: 8px; }
 .hero__feature-list li::first-letter { color: var(--accent); }
 
-.hero__cta-row  { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+.hero__cta-row  { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 16px; justify-content: center; }
 /* CTA primary: matches reference blue→purple gradient */
 .hero__cta {
   display: inline-flex; align-items: center; gap: 8px; padding: 13px 30px; border-radius: 8px;
@@ -431,7 +432,7 @@ select option { background: var(--surface2); }
 }
 
 @media (max-width: 900px) {
-  .hero-container   { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .hero-container   { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   .hero__content    { display: flex; flex-direction: column; align-items: center; }
   .hero__subtitle   { max-width: 480px; }
   .hero__feature-list { align-items: flex-start; text-align: left; }
