@@ -32,20 +32,33 @@ export default function App() {
   const [page, setPage] = useState('home');
 
   const navigate = (to) => {
+    console.log("Navigating to:", to);
     setPage(to);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    try {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
   };
 
   const renderPage = () => {
-    const factory = PAGES[page] || PAGES.home;
-    return factory(navigate);
+    try {
+      const factory = PAGES[page] || PAGES.home;
+      if (!factory) return <div style={{padding: '100px', color: 'red'}}>Page Factory Missing</div>;
+      return factory(navigate);
+    } catch (err) {
+      console.error("Render error:", err);
+      return <div style={{padding: '100px', color: 'red'}}>Error loading page: {err.message}</div>;
+    }
   };
 
   return (
     <ThemeProvider>
       <div className="app-shell">
         <Navbar page={page} setPage={navigate} />
-        {renderPage()}
+        <div className="page-wrapper">
+          {renderPage()}
+        </div>
         {!NO_FOOTER_PAGES.has(page) && <Footer />}
       </div>
     </ThemeProvider>
