@@ -28,11 +28,11 @@ export default function LandingPage({ navigate }) {
               </div>
 
               <h1 className="hero__title">
-                Uni<span className="hero__title-accent">One</span>
+                Trans<span className="hero__title-accent">Form</span>
               </h1>
 
               <div className="hero__subtitle">
-                Welcome to UniOne, your ultimate platform for academic excellence and seamless learning. Experience a completely centralized hub tailored for engineering students:
+                your journy with UniOne, your ultimate platform for academic excellence and seamless learning. Experience a completely centralized StudyHub...
                 <ul className="hero__feature-list">
                   <li>✦ Comprehensive Study Notes</li>
                   <li>✦ Premium Content Packs</li>
