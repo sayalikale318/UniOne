@@ -48,11 +48,11 @@ export default function App() {
   const renderPage = () => {
     try {
       const factory = PAGES[page] || PAGES.home;
-      if (!factory) return <div style={{padding: '100px', color: 'red'}}>Page Factory Missing</div>;
+      if (!factory) return <div style={{ padding: '100px', color: 'red' }}>Page Factory Missing</div>;
       return factory(navigate);
     } catch (err) {
       console.error("Render error:", err);
-      return <div style={{padding: '100px', color: 'red'}}>Error loading page: {err.message}</div>;
+      return <div style={{ padding: '100px', color: 'red' }}>Error loading page: {err.message}</div>;
     }
   };
 
