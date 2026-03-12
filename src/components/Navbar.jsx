@@ -83,9 +83,9 @@ export default function Navbar({ page, setPage }) {
                 {link.label}
               </button>
             ))}
-            <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div className="navbar__mobile-actions">
               <button className="navbar__mobile-btn navbar__mobile-btn--secondary" onClick={() => handleNav('login')}>Login</button>
-              <button className="navbar__mobile-btn" onClick={() => handleNav('register')}>Register Free</button>
+              <button className="navbar__mobile-btn navbar__mobile-btn--primary" onClick={() => handleNav('register')}>Register Free</button>
             </div>
           </div>
         )}
