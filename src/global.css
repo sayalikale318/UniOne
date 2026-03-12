@@ -430,7 +430,7 @@ select option {
 }
 
 .page-wrapper {
-  padding-top: calc(var(--navbar-h) - 10px);
+  padding-top: var(--navbar-h);
 }
 
 .coming-soon {
