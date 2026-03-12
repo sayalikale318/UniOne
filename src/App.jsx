@@ -3,6 +3,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
+import OurTeam from './pages/OurTeam';
 
 /* ── Placeholder pages for non-home routes ── */
 function ComingSoon({ title, navigate }) {
@@ -21,7 +22,7 @@ const PAGES = {
   home: (nav) => <LandingPage navigate={nav} />,
   explore: (nav) => <ComingSoon title="Explore Free Resources" navigate={nav} />,
   store: (nav) => <ComingSoon title="UniOne Store" navigate={nav} />,
-  team: (nav) => <ComingSoon title="Our Team" navigate={nav} />,
+  team: (nav) => <OurTeam navigate={nav} />,
   contact: (nav) => <ComingSoon title="Contact Us" navigate={nav} />,
   notes: (nav) => <ComingSoon title="Study Notes" navigate={nav} />,
   premium_info: (nav) => <ComingSoon title="Notes Premium" navigate={nav} />,
