@@ -430,7 +430,7 @@ select option {
 }
 
 .page-wrapper {
-  padding-top: var(--navbar-h);
+  padding-top: calc(var(--navbar-h) - 10px);
 }
 
 .coming-soon {
@@ -1224,7 +1224,7 @@ select option {
 }
 
 .landing-main {
-  padding-top: 70px;
+  padding-top: 0;
 }
 
 /* Even tighter gap per Lead request */
@@ -1235,7 +1235,7 @@ select option {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 40px 0 50px;
+  padding: 10px 0 50px;
   margin-top: 0;
 }
 
