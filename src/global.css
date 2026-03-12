@@ -31,7 +31,7 @@
   --text: #E6EDF3;
   --text2: #8B949E;
   --text3: #6E7681;
-  --navbar-h: 110px;
+  --navbar-h: 80px;
   --footer-h: 72px;
   --grad-main: linear-gradient(135deg, #2F81F7, #A371F7);
   --grad-gold: linear-gradient(135deg, #E3B341, #F0C674);
@@ -493,9 +493,9 @@ select option {
   left: 0;
   right: 0;
   z-index: 1000;
-  max-width: 1320px;
-  margin: 22px auto;
-  padding: 0 22px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
@@ -503,12 +503,11 @@ select option {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  background: rgba(13, 17, 23, 0.75);
-  padding: 12px 30px;
-  height: 75px;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+  background: rgba(13, 17, 23, 0.8);
+  padding: 0 40px;
+  height: 80px;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.35s ease;
@@ -739,7 +738,7 @@ select option {
 
 @media (max-width: 1024px) {
   :root {
-    --navbar-h: 90px;
+    --navbar-h: 80px;
   }
   .navbar__links {
     display: none;
@@ -750,8 +749,8 @@ select option {
   }
 
   .navbar-wrap {
-    margin: 10px auto;
-    padding: 0 12px;
+    margin: 0;
+    padding: 0;
   }
 
   .navbar {
@@ -761,7 +760,7 @@ select option {
 
 @media (max-width: 768px) {
   :root {
-    --navbar-h: 85px;
+    --navbar-h: 70px;
   }
   .navbar {
     height: 70px;
@@ -800,7 +799,7 @@ select option {
 
 @media (max-width: 480px) {
   :root {
-    --navbar-h: 75px;
+    --navbar-h: 60px;
   }
   .navbar {
     height: 60px;
@@ -816,13 +815,13 @@ select option {
   }
 
   .navbar-wrap {
-    margin: 8px auto;
+    margin: 0;
   }
 }
 
 @media (max-width: 375px) {
   :root {
-    --navbar-h: 65px;
+    --navbar-h: 52px;
   }
   .navbar {
     height: 52px;
@@ -839,7 +838,7 @@ select option {
 
 @media (max-width: 320px) {
   :root {
-    --navbar-h: 65px;
+    --navbar-h: 52px;
   }
   .navbar {
     height: 52px;
