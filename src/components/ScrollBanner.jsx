@@ -1,10 +1,11 @@
 import { useRef, useState, useCallback, useEffect } from 'react';
+import Icon from './Icon';
 
 /* ── Card data with images & video ─────────────────────────── */
 const CARDS = [
   {
     id: 1,
-    emoji: '📚', label: 'Engineering Notes', sub: 'All Streams',
+    icon: 'notes', label: 'Engineering Notes', sub: 'All Streams',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
     type: 'image', media: import.meta.env.BASE_URL + 'banners/notes.png',
     popupTitle: 'Engineering Notes & Resources',
@@ -12,7 +13,7 @@ const CARDS = [
   },
   {
     id: 2,
-    emoji: '🤖', label: 'AI Study Assistant', sub: 'Ask Anything',
+    icon: 'bot', label: 'AI Study Assistant', sub: 'Ask Anything',
     grad: 'linear-gradient(135deg,#3a1a6e,#A371F7)', accent: '#A371F7',
     type: 'image', media: import.meta.env.BASE_URL + 'banners/ai.png',
     popupTitle: 'AI-Powered Study Assistant',
@@ -20,7 +21,7 @@ const CARDS = [
   },
   {
     id: 3,
-    emoji: '🎓', label: 'Digital Student ID', sub: 'Verified Identity',
+    icon: 'user', label: 'Digital Student ID', sub: 'Verified Identity',
     grad: 'linear-gradient(135deg,#1a4a1e,#3FB950)', accent: '#3FB950',
     type: 'image', media: import.meta.env.BASE_URL + 'banners/studentid.png',
     popupTitle: 'Digital Student Identity Card',
@@ -28,7 +29,7 @@ const CARDS = [
   },
   {
     id: 4,
-    emoji: '💡', label: 'Smart Exam Prep', sub: 'Mock Tests + Tips',
+    icon: 'exam', label: 'Smart Exam Prep', sub: 'Mock Tests + Tips',
     grad: 'linear-gradient(135deg,#5a3a00,#E3B341)', accent: '#E3B341',
     type: 'image', media: import.meta.env.BASE_URL + 'banners/exam.png',
     popupTitle: 'Smart Exam Preparation',
@@ -36,7 +37,7 @@ const CARDS = [
   },
   {
     id: 5,
-    emoji: '🏆', label: 'Scholarships', sub: 'Never Miss One',
+    icon: 'medal', label: 'Scholarships', sub: 'Never Miss One',
     grad: 'linear-gradient(135deg,#5a1a1a,#F85149)', accent: '#F85149',
     type: 'image', media: import.meta.env.BASE_URL + 'banners/scholarship.png',
     popupTitle: 'Scholarship Tracker',
@@ -44,7 +45,7 @@ const CARDS = [
   },
   {
     id: 6,
-    emoji: '⚡', label: 'Premium Packs', sub: '₹199 Onwards',
+    icon: 'spark', label: 'Premium Library', sub: 'Explore More',
     grad: 'linear-gradient(135deg,#3a1a6e,#A371F7)', accent: '#A371F7',
     type: 'image', media: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
     popupTitle: 'Premium Content Packs',
@@ -52,7 +53,7 @@ const CARDS = [
   },
   {
     id: 7,
-    emoji: '📐', label: 'Formula Sheets', sub: 'Quick Reference',
+    icon: 'file', label: 'Formula Sheets', sub: 'Quick Reference',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
     type: 'image', media: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80',
     popupTitle: 'Engineering Formula Sheets',
@@ -60,7 +61,7 @@ const CARDS = [
   },
   {
     id: 8,
-    emoji: '🔬', label: 'Lab Manuals', sub: 'Practicals Covered',
+    icon: 'lab2', label: 'Lab Manuals', sub: 'Practicals Covered',
     grad: 'linear-gradient(135deg,#1a4a1e,#3FB950)', accent: '#3FB950',
     type: 'image', media: import.meta.env.BASE_URL + 'banners/lab.png',
     popupTitle: 'Lab Manuals & Practicals',
@@ -68,7 +69,7 @@ const CARDS = [
   },
   {
     id: 9,
-    emoji: '📋', label: 'Past Papers', sub: 'Last 5 Years',
+    icon: 'file', label: 'Past Papers', sub: 'Last 5 Years',
     grad: 'linear-gradient(135deg,#5a3a00,#E3B341)', accent: '#E3B341',
     type: 'image', media: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80',
     popupTitle: 'Previous Year Question Papers',
@@ -76,7 +77,7 @@ const CARDS = [
   },
   {
     id: 10,
-    emoji: '🌐', label: 'All Streams', sub: '8+ Branches',
+    icon: 'spark', label: 'All Streams', sub: '8+ Branches',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
     type: 'image', media: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80',
     popupTitle: '8+ Engineering Streams',
@@ -161,7 +162,10 @@ export default function ScrollBanner() {
         onMouseLeave={() => !modal && setPaused(false)}
       >
         <div className="sb-label-row">
-          <span className="sb-eyebrow">✦ Everything you need</span>
+          <span className="sb-eyebrow">
+            <Icon n="spark" s={14} c="currentColor" style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+            Everything you need
+          </span>
           <span className="sb-hint">
             {modal ? 'Popup open' : paused ? 'Hover to pause' : 'Click any card to preview'}
           </span>
@@ -189,7 +193,9 @@ export default function ScrollBanner() {
                   </div>
                 )}
 
-                <div className="sb-card__emoji">{card.emoji}</div>
+                <div className="sb-card__icon">
+                  <Icon n={card.icon} s={24} c="white" />
+                </div>
                 <div className="sb-card__label">{card.label}</div>
                 <div className="sb-card__sub">{card.sub}</div>
                 <div className="sb-card__glow" />
@@ -237,7 +243,9 @@ export default function ScrollBanner() {
 
             {/* Content */}
             <div className="sb-modal__body" style={{ '--modal-accent': modal.accent }}>
-              <div className="sb-modal__emoji">{modal.emoji}</div>
+              <div className="sb-modal__icon">
+                <Icon n={modal.icon} s={36} c="var(--modal-accent)" />
+              </div>
               <h2 className="sb-modal__title">{modal.popupTitle}</h2>
               <p className="sb-modal__desc">{modal.popupDesc}</p>
             </div>

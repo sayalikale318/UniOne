@@ -32,20 +32,22 @@ export default function LandingPage({ navigate }) {
               </h1>
 
               <div className="hero__subtitle">
-                your journy with UniOne, your ultimate platform for academic excellence and seamless learning. Experience a completely centralized StudyHub...
-                <ul className="hero__feature-list">
-                  <li>✦ Comprehensive Study Notes</li>
-                  <li>✦ Premium Content Packs</li>
-                  <li>✦ 24/7 AI Assistant</li>
-                  <li>✦ Digital Student ID</li>
-                  <li>✦ Real-Time Scholarships</li>
-                </ul>
+                your journey with UniOne, your ultimate platform for academic excellence and seamless learning. Experience a completely centralized StudyHub...
+              </div>
+
+              <div className="hero__features-horizontal">
+                {['Comprehensive Study Notes', 'Premium Content Packs', '24/7 AI Assistant', 'Digital Student ID', 'Real-Time Scholarships'].map((f, i) => (
+                  <div key={i} className="hero__feature-item">
+                    <span className="hero__feature-icon">✦</span>
+                    <span className="hero__feature-text">{f}</span>
+                  </div>
+                ))}
               </div>
 
               <div className="hero__cta-row">
                 <button
                   className="hero__cta"
-                  onClick={() => navigate('login')}
+                  onClick={() => navigate('register')}
                   aria-label="Get started with UniOne"
                 >
                   Get Started Free
@@ -79,8 +81,8 @@ export default function LandingPage({ navigate }) {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <img
-                  src="https://images.pexels.com/photos/4943621/pexels-photo-4943621.jpeg"
-                  alt="Engineering student studying with books and laptop"
+                  src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg"
+                  alt="Engineering student studying with modern technology"
                   className="hero-photo"
                   loading="eager"
                 />
