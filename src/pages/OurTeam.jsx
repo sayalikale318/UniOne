@@ -78,7 +78,7 @@ export default function OurTeam() {
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-8">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-            <span className="text-xs font-bold uppercase tracking-widest text-accent">Our Identity</span>
+            <span className="text-sm font-black uppercase tracking-[0.15em] text-accent">Our Identity</span>
           </div>
           <h1 className="font-['Poppins'] text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-[var(--accent)] via-[var(--purple)] to-[#58a6ff] bg-clip-text text-transparent leading-none" style={{ textShadow: '0 8px 24px rgba(47, 129, 247, 0.25)' }}>
             The Humans behind <br/>UniOne.
