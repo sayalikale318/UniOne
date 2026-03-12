@@ -45,7 +45,7 @@ const CARDS = [
   },
   {
     id: 6,
-    icon: 'spark', label: 'Premium Library', sub: 'Explore More',
+    icon: 'zap', label: 'Premium Packs', sub: 'Explore More',
     grad: 'linear-gradient(135deg,#3a1a6e,#A371F7)', accent: '#A371F7',
     type: 'image', media: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
     popupTitle: 'Premium Content Packs',
@@ -53,7 +53,7 @@ const CARDS = [
   },
   {
     id: 7,
-    icon: 'file', label: 'Formula Sheets', sub: 'Quick Reference',
+    icon: 'ruler', label: 'Formula Sheets', sub: 'Quick Reference',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
     type: 'image', media: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80',
     popupTitle: 'Engineering Formula Sheets',
@@ -61,7 +61,7 @@ const CARDS = [
   },
   {
     id: 8,
-    icon: 'lab2', label: 'Lab Manuals', sub: 'Practicals Covered',
+    icon: 'microscope', label: 'Lab Manuals', sub: 'Practicals Covered',
     grad: 'linear-gradient(135deg,#1a4a1e,#3FB950)', accent: '#3FB950',
     type: 'image', media: import.meta.env.BASE_URL + 'banners/lab.png',
     popupTitle: 'Lab Manuals & Practicals',
@@ -77,7 +77,7 @@ const CARDS = [
   },
   {
     id: 10,
-    icon: 'spark', label: 'All Streams', sub: '8+ Branches',
+    icon: 'globe', label: 'All Streams', sub: '8+ Branches',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
     type: 'image', media: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80',
     popupTitle: '8+ Engineering Streams',

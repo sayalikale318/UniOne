@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import WhyChoose from '../components/WhyChoose';
 import SectionDivider from '../components/SectionDivider';
 import ScrollBanner from '../components/ScrollBanner';
+import Icon from '../components/Icon';
 
 export default function LandingPage({ navigate }) {
   return (
@@ -36,10 +37,18 @@ export default function LandingPage({ navigate }) {
               </div>
 
               <div className="hero__features-horizontal">
-                {['Comprehensive Study Notes', 'Premium Content Packs', '24/7 AI Assistant', 'Digital Student ID', 'Real-Time Scholarships'].map((f, i) => (
+                {[
+                  { text: 'Comprehensive Study Notes', icon: 'book' },
+                  { text: 'Premium Content Packs', icon: 'star' },
+                  { text: '24/7 AI Assistant', icon: 'bot' },
+                  { text: 'Digital Student ID', icon: 'user' },
+                  { text: 'Real-Time Scholarships', icon: 'award' }
+                ].map((f, i) => (
                   <div key={i} className="hero__feature-item">
-                    <span className="hero__feature-icon">✦</span>
-                    <span className="hero__feature-text">{f}</span>
+                    <span className="hero__feature-icon">
+                      <Icon n={f.icon} s={16} c="var(--accent2)" />
+                    </span>
+                    <span className="hero__feature-text">{f.text}</span>
                   </div>
                 ))}
               </div>
@@ -81,8 +90,8 @@ export default function LandingPage({ navigate }) {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <img
-                  src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg"
-                  alt="Engineering student studying with modern technology"
+                  src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg"
+                  alt="Engineering students collaborating with UniOne platform"
                   className="hero-photo"
                   loading="eager"
                 />
