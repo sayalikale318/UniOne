@@ -1235,7 +1235,7 @@ select option {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 10px 0 50px;
+  padding: 0 0 50px;
   margin-top: 0;
 }
 

@@ -49,7 +49,7 @@ export default function OurTeam() {
       <div className="team-bg-blob team-bg-blob--2"></div>
 
       {/* Hero Section */}
-      <section className="pt-2 pb-20 px-6 text-center relative z-10">
+      <section className="pt-0 pb-20 px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-8">
             <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
