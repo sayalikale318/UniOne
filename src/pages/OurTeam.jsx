@@ -43,7 +43,7 @@ export default function OurTeam() {
   ];
 
   return (
-    <div className="our-team-page" style={{ fontFamily: '"Trebuchet MS", "Segoe UI", system-ui, sans-serif' }}>
+    <div className="our-team-page">
       {/* Background Blobs */}
       <div className="team-bg-blob team-bg-blob--1"></div>
       <div className="team-bg-blob team-bg-blob--2"></div>
@@ -53,15 +53,15 @@ export default function OurTeam() {
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-8">
             <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-            <span className="text-lg font-black uppercase tracking-[0.2em] text-accent">Our Identity</span>
+            <span className="text-lg font-black uppercase tracking-[0.2em] text-accent font-['DM_Sans']">Our Identity</span>
           </div>
-          <h1 className="font-['Poppins'] text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-[var(--accent)] via-[var(--purple)] to-[#58a6ff] bg-clip-text text-transparent leading-none" style={{ textShadow: '0 8px 24px rgba(47, 129, 247, 0.25)' }}>
+          <h1 className="font-['Syne'] text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-[var(--accent)] via-[var(--purple)] to-[#58a6ff] bg-clip-text text-transparent leading-[1.1] tracking-tight" style={{ textShadow: '0 8px 32px rgba(47, 129, 247, 0.2)' }}>
             The Humans behind <br />UniOne.
           </h1>
-          <p className="text-2xl md:text-3xl font-['Poppins'] font-semibold mb-6 text-[var(--text)] opacity-90">
+          <p className="text-2xl md:text-3xl font-['DM_Sans'] font-medium mb-10 text-[var(--text)] opacity-90 leading-relaxed max-w-2xl mx-auto">
             Pioneering the AI-First Academic Era
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent to-purple mx-auto rounded-full mb-8"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-accent to-purple mx-auto rounded-full mb-8"></div>
         </div>
       </section>
 
