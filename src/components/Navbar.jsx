@@ -4,7 +4,8 @@ import Icon from './Icon';
 
 const NAV_LINKS = [
   { id: 'home', label: 'Home' },
-  { id: 'team', label: 'About' },
+  { id: 'about', label: 'About Us' },
+  { id: 'team', label: 'Our Team' },
   { id: 'contact', label: 'Contact Us' },
   { id: 'explore', label: 'Explore Free' },
   { id: 'store', label: 'UniOne Store' },

@@ -1,12 +1,14 @@
 import React from "react";
+import { motion } from 'framer-motion';
 import { TeamMemberCard } from "../components/TeamMemberCard";
+import SectionDivider from "../components/SectionDivider";
 
 import prasadImg from "../assets/f733216468586a1466b9ee630f5c624e939b5455.png";
 import aditiImg from "../assets/52fdbd18955f69b75f619adec6ac286721834731.png";
 import tejaswiniImg from "../assets/c4a9bcde420346f09bf0afc5200f5f393228e9c9.png";
 import karanImg from "../assets/c95d976dd299e71b8bdafdf2221a0fd271318006.png";
 
-export default function OurTeam() {
+export default function OurTeam({ navigate }) {
   const teamMembers = [
     {
       image: prasadImg,
@@ -43,42 +45,90 @@ export default function OurTeam() {
   ];
 
   return (
-    <div className="our-team-page">
-      {/* Background Blobs */}
-      <div className="team-bg-blob team-bg-blob--1"></div>
-      <div className="team-bg-blob team-bg-blob--2"></div>
+    <div className="landing-page our-team-page">
+      <main className="landing-main">
+        {/* ══════════════════ TEAM HERO ══════════════════ */}
+        <section className="hero" aria-label="Our team hero section">
+          {/* Landing Page style grid and blobs */}
+          <div className="hero-grid-bg" aria-hidden="true" />
+          <div className="hero-bg-blob" aria-hidden="true" />
 
-      {/* Hero Section */}
-      <section className="pt-0 pb-20 px-6 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-8">
-            <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-            <span className="text-lg font-black uppercase tracking-[0.2em] text-accent font-['DM_Sans']">Our Identity</span>
-          </div>
-          <h1 className="font-['Syne'] text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-[var(--accent)] via-[var(--purple)] to-[#58a6ff] bg-clip-text text-transparent leading-[1.1] tracking-tight" style={{ textShadow: '0 8px 32px rgba(47, 129, 247, 0.2)' }}>
-            The Humans behind <br />UniOne.
-          </h1>
-          <p className="text-2xl md:text-3xl font-['DM_Sans'] font-medium mb-10 text-[var(--text)] opacity-90 leading-relaxed max-w-2xl mx-auto">
-            Pioneering the AI-First Academic Era
-          </p>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-accent to-purple mx-auto rounded-full mb-8"></div>
-        </div>
-      </section>
+          <div className="hero-container container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <motion.div
+              className="hero__content"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              style={{ alignItems: 'center', textAlign: 'center' }}
+            >
+              <div className="hero__badge">
+                <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                  OUR IDENTITY
+                </span>
+              </div>
 
-      {/* Team Members */}
-      <section className="py-12 px-6 relative z-10">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col gap-16">
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard
-                key={`${member.firstName}-${member.lastName}`}
-                {...member}
-                isReversed={index % 2 !== 0}
-              />
-            ))}
+              <h1 className="hero__title">
+                <span className="hero__title-line" style={{ fontSize: 'clamp(28px, 6vw, 64px)', color: 'var(--text)' }}>The Humans</span>
+                <span className="hero__title-line" style={{ fontSize: 'clamp(24px, 5.5vw, 58px)', opacity: 0.8, marginTop: '8px' }}>
+                  <span className="hero__title-accent" style={{
+                    background: 'var(--grad-main)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    filter: 'drop-shadow(0 0 30px rgba(47, 129, 247, 0.4))'
+                  }}>Behind UniOne</span>
+                </span>
+              </h1>
+
+
+
+              <div className="hero__subtitle" style={{ maxWidth: '750px', margin: '0 auto 32px' }}>
+                Pioneering the AI-First Academic Era. Meet the visionary team dedicated to transforming how university students learn and grow.
+              </div>
+
+              <div className="hero__cta-row" style={{ justifyContent: 'center' }}>
+                <button
+                  className="hero__cta"
+                  onClick={() => navigate('contact')}
+                >
+                  Join Our Journey
+                </button>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Same Wave divider as Landing Page */}
+        <SectionDivider variant="hero" />
+
+        {/* Team Section with spacing matching Landing Page flow */}
+        <section className="py-24 px-6 relative z-10">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="flex flex-col gap-12 md:gap-24">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={`${member.firstName}-${member.lastName}`}
+                  initial={{ opacity: 0, scale: 0.9, y: 100 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, y: 50 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.1,
+                    ease: [0.215, 0.61, 0.355, 1]
+                  }}
+                >
+                  <TeamMemberCard
+                    {...member}
+                    isReversed={index % 2 !== 0}
+                  />
+                </motion.div>
+
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

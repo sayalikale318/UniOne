@@ -29,12 +29,23 @@ export default function LandingPage({ navigate }) {
               </div>
 
               <h1 className="hero__title">
-                Trans<span className="hero__title-accent">Form</span>
+                <span className="hero__title-line" style={{ fontSize: 'clamp(28px, 6vw, 64px)', color: 'var(--text)' }}>TransForm Your</span>
+                <span className="hero__title-line" style={{ fontSize: 'clamp(24px, 5.5vw, 58px)', opacity: 0.8, marginTop: '8px' }}>
+                  Academic <span className="hero__title-accent" style={{
+                    background: 'var(--grad-main)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    filter: 'drop-shadow(0 0 30px rgba(47, 129, 247, 0.4))'
+                  }}>Journey</span>
+                </span>
               </h1>
 
+
+
               <div className="hero__subtitle">
-                your journey with UniOne, your ultimate platform for academic excellence and seamless learning. Experience a completely centralized StudyHub...
+                The ultimate platform for academic excellence and seamless learning. Experience a completely centralized StudyHub designed specifically for engineering students.
               </div>
+
 
               <div className="hero__features-horizontal">
                 {[
