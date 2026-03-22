@@ -7,7 +7,7 @@ const CARDS = [
     id: 1,
     icon: 'notes', label: 'Engineering Notes', sub: 'All Streams',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
-    type: 'image', media: import.meta.env.BASE_URL + 'banners/notes.png',
+    type: 'image', media: 'https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Engineering Notes & Resources',
     popupDesc: 'Access free chapter-wise notes, formula sheets, and reference materials for all 8+ engineering streams — updated every semester.',
   },
@@ -15,7 +15,7 @@ const CARDS = [
     id: 2,
     icon: 'bot', label: 'AI Study Assistant', sub: 'Ask Anything',
     grad: 'linear-gradient(135deg,#3a1a6e,#A371F7)', accent: '#A371F7',
-    type: 'image', media: import.meta.env.BASE_URL + 'banners/ai.png',
+    type: 'image', media: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'AI-Powered Study Assistant',
     popupDesc: 'Ask subject doubts, get concept explanations, exam strategies, and personalized study plans powered by advanced AI.',
   },
@@ -23,7 +23,7 @@ const CARDS = [
     id: 3,
     icon: 'user', label: 'Digital Student ID', sub: 'Verified Identity',
     grad: 'linear-gradient(135deg,#1a4a1e,#3FB950)', accent: '#3FB950',
-    type: 'image', media: import.meta.env.BASE_URL + 'banners/studentid.png',
+    type: 'image', media: 'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Digital Student Identity Card',
     popupDesc: 'Generate your official verified digital student ID. Required for premium purchases and recognized across the platform.',
   },
@@ -31,7 +31,7 @@ const CARDS = [
     id: 4,
     icon: 'exam', label: 'Smart Exam Prep', sub: 'Mock Tests + Tips',
     grad: 'linear-gradient(135deg,#5a3a00,#E3B341)', accent: '#E3B341',
-    type: 'image', media: import.meta.env.BASE_URL + 'banners/exam.png',
+    type: 'image', media: 'https://images.pexels.com/photos/3747468/pexels-photo-3747468.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Smart Exam Preparation',
     popupDesc: 'Curated mock tests, previous year papers, and AI-generated practice questions tailored to your stream and semester.',
   },
@@ -39,7 +39,7 @@ const CARDS = [
     id: 5,
     icon: 'medal', label: 'Scholarships', sub: 'Never Miss One',
     grad: 'linear-gradient(135deg,#5a1a1a,#F85149)', accent: '#F85149',
-    type: 'image', media: import.meta.env.BASE_URL + 'banners/scholarship.png',
+    type: 'image', media: 'https://images.pexels.com/photos/8112199/pexels-photo-8112199.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Scholarship Tracker',
     popupDesc: 'All open government and private scholarships tracked in one place — with deadlines, eligibility criteria, and direct apply links.',
   },
@@ -47,7 +47,7 @@ const CARDS = [
     id: 6,
     icon: 'zap', label: 'Premium Packs', sub: 'Explore More',
     grad: 'linear-gradient(135deg,#3a1a6e,#A371F7)', accent: '#A371F7',
-    type: 'image', media: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+    type: 'image', media: 'https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Premium Content Packs',
     popupDesc: 'Lite, Medium & Premium packs with deep-dive notes, lab manuals, question bank, and mock tests starting at just ₹199.',
   },
@@ -55,7 +55,7 @@ const CARDS = [
     id: 7,
     icon: 'ruler', label: 'Formula Sheets', sub: 'Quick Reference',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
-    type: 'image', media: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80',
+    type: 'image', media: 'https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Engineering Formula Sheets',
     popupDesc: 'Comprehensive formula sheets for every subject — from Thermodynamics to Data Structures, ready to download and print.',
   },
@@ -63,7 +63,7 @@ const CARDS = [
     id: 8,
     icon: 'microscope', label: 'Lab Manuals', sub: 'Practicals Covered',
     grad: 'linear-gradient(135deg,#1a4a1e,#3FB950)', accent: '#3FB950',
-    type: 'image', media: import.meta.env.BASE_URL + 'banners/lab.png',
+    type: 'image', media: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Lab Manuals & Practicals',
     popupDesc: 'Step-by-step lab manuals with observations, circuits, and readings for all practical subjects across semesters.',
   },
@@ -71,7 +71,7 @@ const CARDS = [
     id: 9,
     icon: 'file', label: 'Past Papers', sub: 'Last 5 Years',
     grad: 'linear-gradient(135deg,#5a3a00,#E3B341)', accent: '#E3B341',
-    type: 'image', media: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80',
+    type: 'image', media: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: 'Previous Year Question Papers',
     popupDesc: 'University and board question papers from the last 5 years with solutions — the fastest way to prepare for exams.',
   },
@@ -79,7 +79,7 @@ const CARDS = [
     id: 10,
     icon: 'globe', label: 'All Streams', sub: '8+ Branches',
     grad: 'linear-gradient(135deg,#1a3a6e,#2F81F7)', accent: '#2F81F7',
-    type: 'image', media: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80',
+    type: 'image', media: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
     popupTitle: '8+ Engineering Streams',
     popupDesc: 'Computer, IT, Mechanical, Civil, Electrical, Electronics, AI & DS, Chemical — every stream covered with dedicated resources.',
   },
@@ -89,14 +89,14 @@ const CARDS = [
 const ALL_CARDS = [...CARDS, ...CARDS.map(c => ({ ...c, id: c.id + 100 }))];
 
 export default function ScrollBanner() {
-  const trackRef          = useRef(null);
-  const animFrameRef      = useRef(null);
-  const scrollPosRef      = useRef(0);   // tracks marquee scroll position
-  const speedRef          = useRef(0.6); // px per frame
+  const trackRef = useRef(null);
+  const animFrameRef = useRef(null);
+  const scrollPosRef = useRef(0);   // tracks marquee scroll position
+  const speedRef = useRef(0.6); // px per frame
 
-  const [paused, setPaused]       = useState(false);
-  const [activeId, setActive]     = useState(null);
-  const [modal, setModal]         = useState(null); // card data when popup open
+  const [paused, setPaused] = useState(false);
+  const [activeId, setActive] = useState(null);
+  const [modal, setModal] = useState(null); // card data when popup open
 
   /* ── Continuous scroll animation ──────────────────────────── */
   useEffect(() => {
@@ -163,16 +163,13 @@ export default function ScrollBanner() {
       >
         <div className="sb-label-row">
           <span className="sb-eyebrow">
-            <Icon n="spark" s={14} c="currentColor" style={{ marginRight: '6px', verticalAlign: 'middle' }} />
-            Everything you need
-          </span>
-          <span className="sb-hint">
-            {modal ? 'Popup open' : paused ? 'Hover to pause' : 'Click any card to preview'}
+            <Icon n="spark" s={12} c="currentColor" style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+            Everything You Need
           </span>
         </div>
 
         {/* fade masks */}
-        <div className="sb-fade sb-fade--left"  aria-hidden="true" />
+        <div className="sb-fade sb-fade--left" aria-hidden="true" />
         <div className="sb-fade sb-fade--right" aria-hidden="true" />
 
         {/* scrollable track — driven by rAF, not CSS animation */}

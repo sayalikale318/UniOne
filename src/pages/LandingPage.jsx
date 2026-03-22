@@ -25,6 +25,7 @@ export default function LandingPage({ navigate }) {
               <div
                 className="hero__badge"
               >
+                <Icon n="spark" s={12} c="currentColor" />
                 <span>BUILT FOR ENGINEERING STUDENTS</span>
               </div>
 
@@ -35,6 +36,7 @@ export default function LandingPage({ navigate }) {
                     background: 'var(--grad-main)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
                     filter: 'drop-shadow(0 0 30px rgba(47, 129, 247, 0.4))'
                   }}>Journey</span>
                 </span>
@@ -49,11 +51,10 @@ export default function LandingPage({ navigate }) {
 
               <div className="hero__features-horizontal">
                 {[
-                  { text: 'Comprehensive Study Notes', icon: 'book' },
-                  { text: 'Premium Content Packs', icon: 'star' },
-                  { text: '24/7 AI Assistant', icon: 'bot' },
-                  { text: 'Digital Student ID', icon: 'user' },
-                  { text: 'Real-Time Scholarships', icon: 'award' }
+                  { text: 'Study Notes', icon: 'book' },
+                  { text: 'Premium Packs', icon: 'star' },
+                  { text: 'AI Assistant', icon: 'bot' },
+                  { text: 'Scholarships', icon: 'award' }
                 ].map((f, i) => (
                   <div key={i} className="hero__feature-item">
                     <span className="hero__feature-icon">
@@ -71,6 +72,7 @@ export default function LandingPage({ navigate }) {
                   aria-label="Get started with UniOne"
                 >
                   Get Started Free
+                  <Icon n="arrow" s={16} c="white" />
                 </button>
                 <button
                   className="hero__cta-ghost"
@@ -82,7 +84,7 @@ export default function LandingPage({ navigate }) {
               </div>
 
               <div className="hero__pills">
-                {['12,000+ Students', '5,000+ Resources', '8+ Streams', 'AI-Powered'].map((p, i) => (
+                {['12,000+ Students', '5,000+ Resources', 'AI-Powered'].map((p, i) => (
                   <span key={i} className="hero__pill">{p}</span>
                 ))}
               </div>
@@ -101,7 +103,7 @@ export default function LandingPage({ navigate }) {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <img
-                  src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg"
+                  src="https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg?auto=compress&cs=tinysrgb&w=3840&q=100"
                   alt="Engineering students collaborating with UniOne platform"
                   className="hero-photo"
                   loading="eager"
@@ -119,8 +121,8 @@ export default function LandingPage({ navigate }) {
         {/* Horizontal scroll feature banner */}
         <ScrollBanner />
 
-        {/* Why Choose section */}
-        <WhyChoose />
+        {/* Why UniOne Merged Sections (Features + Advantage) */}
+        <WhyChoose navigate={navigate} />
 
       </main>
     </div>
