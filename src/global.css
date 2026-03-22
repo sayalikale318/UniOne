@@ -5247,8 +5247,8 @@ select option {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1.4fr;
-  gap: 48px;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr 2.5fr;
+  gap: 40px;
   padding: 0 32px;
   align-items: start;
   position: relative;
@@ -5273,7 +5273,7 @@ select option {
 .footer-brand h2 {
   margin: 0;
   font-family: 'Syne', sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   color: var(--text);
   letter-spacing: -0.5px;
@@ -5283,19 +5283,18 @@ select option {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: var(--grad-main);
+  background: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
   color: white;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
   font-size: 20px;
 }
 
 .brand-text {
-  font-size: 13.5px;
-  /* Slightly smaller text for compact layout */
+  font-size: 11.5px;
+  /* Reduced for ultra-compact layout */
   color: var(--text2);
   line-height: 1.5;
   margin-bottom: 12px;
@@ -5306,25 +5305,15 @@ select option {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 5px 14px;
   border-radius: 100px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  color: var(--green);
-  font-size: 11px;
-  font-weight: 800;
+  background: rgba(47, 129, 247, 0.08);
+  border: 1px solid rgba(47, 129, 247, 0.2);
+  color: #3b82f6;
+  font-size: 9px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-}
-
-.status-badge::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: var(--green);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--green);
-  animation: pulseStatus 2s infinite;
 }
 
 @keyframes pulseStatus {
@@ -5346,18 +5335,18 @@ select option {
 
 /* LIST SECTIONS */
 .footer-section h4 {
-  font-family: 'Syne', sans-serif;
-  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
   color: var(--text);
-  text-align: center;
+  text-align: left;
 }
 
 .footer-section {
-  text-align: center;
+  text-align: left;
 }
 
 .footer-brand {
@@ -5374,9 +5363,8 @@ select option {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* Center the list items */
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 
@@ -5384,7 +5372,7 @@ select option {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 14.5px;
+  font-size: 12.5px;
   color: var(--text2);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -5413,56 +5401,68 @@ select option {
   transform: scale(1.2);
 }
 
-/* NEWSLETTER */
+.newsletter h4 {
+  margin-bottom: 16px;
+}
+
 .newsletter p {
-  font-size: 13px;
+  font-size: 11.5px;
   color: var(--text2);
-  margin-bottom: 12px;
-  line-height: 1.4;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .newsletter-box {
   display: flex;
-  gap: 8px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 6px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 46px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .newsletter-box:focus-within {
   border-color: var(--accent);
-  background: var(--surface2);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .newsletter-box input {
   flex: 1;
-  background: transparent !important;
-  border: none !important;
-  padding: 8px 12px !important;
-  color: var(--text) !important;
-  outline: none !important;
+  background: transparent;
+  border: none;
+  padding: 0 16px;
+  color: #fff;
+  outline: none;
   font-size: 14px;
 }
 
 .newsletter-box button {
-  padding: 0 16px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   border: none;
-  background: var(--grad-main);
+  background: #3b82f6;
   color: white;
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  font-size: 18px;
+  transition: all 0.2s ease;
 }
 
 .newsletter-box button:hover {
-  transform: scale(1.05) rotate(5deg);
-  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+  background: #2563eb;
+}
+
+[data-theme="light"] .newsletter-box {
+  background: #f8fafc;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .newsletter-box input {
+  color: #1e293b;
 }
 
 /* FOOTER BOTTOM */
@@ -5474,7 +5474,7 @@ select option {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--text3);
   position: relative;
   z-index: 2;
@@ -5513,6 +5513,11 @@ select option {
     grid-template-columns: 1fr;
     gap: 48px;
     text-align: center;
+  }
+
+  .footer-section h4 {
+    text-align: center;
+    margin-bottom: 24px;
   }
 
   .footer-brand {

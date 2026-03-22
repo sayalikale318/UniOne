@@ -56,13 +56,12 @@ function Footer({ navigate, className = "" }) {
             <li>
               <button onClick={() => handleNav('notes')} className="list-item">
                 <FiFileText className="footer-icon" />
-                Free Notes
+                Study Notes
               </button>
             </li>
             <li>
               <button onClick={() => handleNav('premium_info')} className="list-item">
-                <FiStar className="footer-icon" />
-                Premium Packs
+                <FiStar className="footer-icon" />Premium Pack
               </button>
             </li>
             <li>
@@ -74,7 +73,7 @@ function Footer({ navigate, className = "" }) {
             <li>
               <button onClick={() => handleNav('home')} className="list-item">
                 <FiAward className="footer-icon" />
-                Scholarship Hub
+                Scholarships
               </button>
             </li>
           </ul>
@@ -95,7 +94,7 @@ function Footer({ navigate, className = "" }) {
             <li>
               <button onClick={() => handleNav('team')} className="list-item">
                 <FiUsers className="footer-icon" />
-                MY Creator
+                Meet Humans
               </button>
             </li>
             <li>
