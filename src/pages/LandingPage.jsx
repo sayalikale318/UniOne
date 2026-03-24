@@ -3,6 +3,9 @@ import WhyChoose from '../components/WhyChoose';
 import SectionDivider from '../components/SectionDivider';
 import ScrollBanner from '../components/ScrollBanner';
 import Icon from '../components/Icon';
+import StatsSection from '../components/StatsSection';
+import Testimonials from '../components/Testimonials';
+import EngagementCTA from '../components/EngagementCTA';
 
 export default function LandingPage({ navigate }) {
   return (
@@ -30,7 +33,7 @@ export default function LandingPage({ navigate }) {
               </div>
 
               <h1 className="hero__title">
-                <span className="hero__title-line" style={{ fontSize: 'clamp(28px, 6vw, 64px)', color: 'var(--text)' }}>TransForm Your</span>
+                <span className="hero__title-line" style={{ fontSize: 'clamp(28px, 6vw, 64px)', color: 'var(--text)' }}>Transform Your</span>
                 <span className="hero__title-line" style={{ fontSize: 'clamp(24px, 5.5vw, 58px)', opacity: 0.8, marginTop: '8px' }}>
                   Academic <span className="hero__title-accent" style={{
                     background: 'var(--grad-main)',
@@ -103,26 +106,34 @@ export default function LandingPage({ navigate }) {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <img
-                  src="https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg?auto=compress&cs=tinysrgb&w=3840&q=100"
+                  src="https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
                   alt="Engineering students collaborating with UniOne platform"
                   className="hero-photo"
                   loading="eager"
                 />
-                {/* Radial gradient mask to blend edges into background */}
                 <div className="hero-photo__overlay" aria-hidden="true" />
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* Wave divider */}
-        <SectionDivider variant="hero" />
+        {/* 01. STATS DASHBOARD (Social Proof) */}
+        <StatsSection />
 
         {/* Horizontal scroll feature banner */}
         <ScrollBanner />
 
+        {/* Wave divider */}
+        <SectionDivider variant="hero" />
+
         {/* Why UniOne Merged Sections (Features + Advantage) */}
         <WhyChoose navigate={navigate} />
+
+        {/* 02. TESTIMONIALS (Social Validation) */}
+        <Testimonials />
+
+        {/* 03. FINAL CALL TO ACTION (Engagement) */}
+        <EngagementCTA navigate={navigate} />
 
       </main>
     </div>
