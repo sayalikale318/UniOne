@@ -158,7 +158,7 @@ export default function WhyChoose({ navigate }) {
                 ].map((item, i) => (
                   <div key={i} className="vp-item">
                     <div className="vp-item-point">
-                      <Icon n="check" s={12} c="currentColor" />
+                      <Icon n={item.icon} s={12} c="currentColor" />
                     </div>
                     <span className="vp-item-text">{item.title}</span>
                   </div>

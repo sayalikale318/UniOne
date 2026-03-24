@@ -1380,20 +1380,47 @@ select option {
 
 /* Center large subtle blob */
 @keyframes blob1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
 }
 
 @keyframes blob2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-20px, 40px) scale(1.1); }
-  66% { transform: translate(40px, -20px) scale(0.9); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-20px, 40px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(40px, -20px) scale(0.9);
+  }
 }
 
 @keyframes heroFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(0.5deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(0.5deg);
+  }
 }
 
 .hero-photo-wrap {
@@ -1431,6 +1458,7 @@ select option {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -1438,7 +1466,8 @@ select option {
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column-reverse;
-    gap: 0;
+    gap: 40px;
+    text-align: center;
   }
 }
 
@@ -1473,6 +1502,7 @@ select option {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  max-width: 900px;
 }
 
 
@@ -1913,20 +1943,50 @@ select option {
 
 @media (max-width: 768px) {
   .value-prop {
-    padding: 1cm 0;
+    padding: 0.8cm 0 !important;
+  }
+
+  .vp-header {
+    text-align: center;
+    align-items: center;
+  }
+
+  .vp-content {
+    align-items: center;
+    text-align: center;
   }
 
   .vp-list {
     grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .vp-item {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .vp-item-point {
+    display: flex !important;
+    opacity: 0.9;
   }
 
   .vp-actions {
     flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto 0;
+  }
+
+  .vp-btn {
+    width: 100%;
+    text-align: center;
   }
 
   .hero__floating-card {
-    display: none;
-    /* Hide floating elements on mobile to keep it clean */
+    display: none !important;
   }
 }
 
@@ -1980,7 +2040,7 @@ select option {
 
 .hero-image {
   position: relative;
-  display: none !important;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -1988,7 +2048,8 @@ select option {
 
 @media (max-width: 900px) {
   .hero-image {
-    display: none !important;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -5061,17 +5122,19 @@ select option {
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
 
 .step-card {
   position: relative;
   padding: 48px 40px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .step-card:hover {
@@ -5208,12 +5271,14 @@ select option {
 }
 
 .faq-accordion-item {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
   overflow: hidden;
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-accordion-item:hover {
@@ -5264,7 +5329,8 @@ select option {
 }
 
 .faq-accordion-item.active .faq-answer {
-  max-height: 200px; /* Adjust based on content */
+  max-height: 200px;
+  /* Adjust based on content */
   opacity: 1;
   padding: 0 32px 32px;
 }
@@ -5286,7 +5352,7 @@ select option {
 
 .cta-box {
   background: linear-gradient(135deg, rgba(47, 129, 247, 0.92), rgba(163, 113, 247, 0.92)),
-              url('https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
+    url('https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
   background-size: cover;
   background-position: center;
   border-radius: 40px;
@@ -5362,16 +5428,18 @@ select option {
 }
 
 @media (max-width: 768px) {
-  .testimonials-grid, .faq-grid {
+
+  .testimonials-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .cta-box {
     padding: 40px;
     text-align: center;
     flex-direction: column;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
@@ -5851,12 +5919,82 @@ select option {
 }
 
 /* RESPONSIVE OPTIMIZATION */
-@media (max-width: 1100px) {
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+@media (max-width: 768px) {
+
+  /* Global App-like Scaling */
+  .hero__title {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1px !important;
+  }
+
+  .hero__title-line {
+    font-size: 28px !important;
+  }
+
+  .hero__subtitle,
+  .section-desc,
+  .faq-answer p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  .section-title,
+  .why-choose__title {
+    font-size: 26px !important;
+    letter-spacing: -0.5px !important;
+  }
+
+  .step-card h3,
+  .why-card__title,
+  .faq-question h3 {
+    font-size: 18px !important;
+  }
+
+  .why-card__desc,
+  .vp-item-text {
+    font-size: 13.5px !important;
+  }
+
+  .hero__badge,
+  .section-badge,
+  .why-choose__badge {
+    font-size: 10px !important;
+    padding: 2px 10px !important;
+  }
+
+  /* Compact Grids */
+  .steps-grid,
+  .why-choose__grid {
+    gap: 20px !important;
+  }
+
+  .hero,
+  .why-choose,
+  .faq-section {
+    padding: 0.8cm 0 !important;
+  }
+
+  .hero__feature-icon,
+  .step-icon,
+  .why-card__icon {
+    display: none !important;
+  }
+
+  .unione-footer {
+    padding-top: 0.8cm;
+  }
+
+  .step-card {
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .step-number {
+    display: none !important;
   }
 }
+
 
 /* ════════════════════════════════════════════════════════════════
    LAPTOP & SMALL DESKTOP (1024px)

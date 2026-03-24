@@ -86,28 +86,6 @@ export default function LandingPage({ navigate }) {
                 ))}
               </div>
             </motion.div>
-
-            <motion.div
-              className="hero-image"
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.35, ease: 'easeOut' }}
-            >
-              <div className="hero-photo-glow" aria-hidden="true" />
-              <motion.div
-                className="hero-photo-wrap"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              >
-                <img
-                  src="https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg?auto=compress&cs=tinysrgb&w=3840&q=100"
-                  alt="Engineering students collaborating with UniOne platform"
-                  className="hero-photo"
-                  loading="eager"
-                />
-                <div className="hero-photo__overlay" aria-hidden="true" />
-              </motion.div>
-            </motion.div>
           </div>
         </section>
 
@@ -116,47 +94,6 @@ export default function LandingPage({ navigate }) {
 
         {/* Why UniOne Merged Sections (Features + Advantage) */}
         <WhyChoose navigate={navigate} />
-
-        {/* ══════════════════ HOW IT WORKS ══════════════════ */}
-        <section className="how-it-works" aria-label="How it works">
-          <div className="container">
-            <motion.div
-              className="section-header center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="section-badge">PROCESS</div>
-              <h2 className="section-title">Academic Success in <span className="text-accent">3 Steps</span></h2>
-              <p className="section-desc">We've simplified the learning curve. Here's how you can transform your semester exams with UniOn.</p>
-            </motion.div>
-
-            <div className="steps-grid">
-              {[
-                { step: '01', title: 'Join the Hub', desc: 'Create your verified student profile and select your engineering stream to get personalized resources.', icon: 'user' },
-                { step: '02', title: 'Curate Resources', desc: 'Access chapter-wise notes, lab manuals, and previous year papers curated by subject experts.', icon: 'book' },
-                { step: '03', title: 'Prep with AI', desc: 'Use our AI Study Assistant to resolve doubts instantly and practice with generated mock tests.', icon: 'zap' }
-              ].map((s, i) => (
-                <motion.div
-                  key={i}
-                  className="step-card"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                >
-                  <div className="step-number">{s.step}</div>
-                  <div className="step-icon">
-                    <Icon n={s.icon} s={24} c="var(--accent)" />
-                  </div>
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ══════════════════ FAQ SECTION ══════════════════ */}
         <section className="faq-section" aria-label="Frequently asked questions">
@@ -202,7 +139,6 @@ export default function LandingPage({ navigate }) {
             </motion.div>
           </div>
         </section>
-
 
       </main>
     </div>
