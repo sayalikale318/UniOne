@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from 'framer-motion';
 import SectionDivider from "../components/SectionDivider";
 import Icon from "../components/Icon";
+import coreValuesImage from "../assets/core_values.png";
+import visionImage from "../assets/vision.png";
+import whyImage from "../assets/why_section.png"
 
 const stats = [
   { label: "Active Students", value: "12K+", icon: "user" },
@@ -55,7 +58,7 @@ const aiTools = [
 
 export default function AboutUs({ navigate }) {
   return (
-    <div className="landing-page about-us-page">
+    <div className="landing-page about-us-page footer-spacing">
       <main className="landing-main">
         {/* ══════════════════ HERO SECTION ══════════════════ */}
         <section className="hero" aria-label="About us hero">
@@ -124,30 +127,19 @@ export default function AboutUs({ navigate }) {
         <SectionDivider variant="line" />
 
         {/* ══════════════════ OUR STORY SECTION ══════════════════ */}
-        <section className="py-24 px-6 relative z-10 overflow-hidden">
+        <section className="py-24 px-12 relative z-10 overflow-hidden">
           <div className="container max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="flex flex-col items-center text-center gap-12">
               <motion.div
                 initial={{ opacity: 0, scale: 0.94, y: 40 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: false, margin: "-100px" }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               >
-
-                <h2 className="hero__title text-center md:text-left mb-6" style={{ fontSize: 'clamp(28px, 4.5vw, 42px)' }}>
+                <h2 className="hero__title mb-6" style={{ fontSize: 'clamp(28px, 4.5vw, 42px)' }}>
                   A Vision for the <span className="hero__title-accent">Future</span>
                 </h2>
-
-                <div className="space-y-6 text-text2 text-lg leading-relaxed text-center md:text-left">
-                  <p>
-                    UniOne was born to solve a simple problem: students spend too much time searching for materials and not enough time learning.
-                  </p>
-                  <p>
-                    We provide a centralized hub that combines high-quality notes with powerful AI tools, helping you master your engineering curriculum with ease and confidence.
-                  </p>
-                </div>
               </motion.div>
-
               <motion.div
                 className="relative"
                 initial={{ opacity: 0, scale: 0.94, y: 40 }}
@@ -155,18 +147,22 @@ export default function AboutUs({ navigate }) {
                 viewport={{ once: false, margin: "-100px" }}
                 transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               >
-
                 <div className="glass-card mx-auto" style={{
                   padding: '0',
                   overflow: 'hidden',
                   aspectRatio: '1.25/1',
                   border: '2px solid var(--border)',
-                  maxWidth: '480px'
+                  maxWidth: 'min(480px, 90vw)',
+                  width: '100%',
+                  height: 'auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}>
                   <img
-                    src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg"
+                    src={visionImage}
                     alt="Team Collaborating"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }}
+                    style={{ width: '100%', height: 'auto', maxHeight: '340px', objectFit: 'contain', opacity: 0.9, display: 'block', margin: '0 auto' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg to-transparent opacity-40"></div>
                 </div>
@@ -174,7 +170,21 @@ export default function AboutUs({ navigate }) {
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent opacity-20 blur-3xl rounded-full"></div>
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-purple opacity-20 blur-3xl rounded-full"></div>
               </motion.div>
-
+              <motion.div
+                initial={{ opacity: 0, scale: 0.94, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <div className="space-y-8 text-text2 text-lg leading-relaxed">
+                  <p>
+                    UniOne was created to empower engineering students by eliminating the chaos of scattered resources and outdated study methods. Our platform is designed to save you time and boost your academic performance by providing everything you need in one place.
+                  </p>
+                  <p>
+                    With UniOne, you gain access to expertly curated notes, AI-driven learning tools, and a supportive community—all tailored to the unique demands of modern engineering education. Our mission is to help you focus on learning, not searching.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -182,7 +192,7 @@ export default function AboutUs({ navigate }) {
         <SectionDivider variant="line" />
 
         {/* ══════════════════ AI POWERED TOOLS ══════════════════ */}
-        <section className="py-24 px-6 relative z-10 bg-surface/30">
+        <section className="py-24 px-12 relative z-10 bg-surface/30">
           <div className="container max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <motion.div
@@ -245,9 +255,19 @@ export default function AboutUs({ navigate }) {
 
 
         {/* ══════════════════ CORE VALUES ══════════════════ */}
-        <section className="py-24 px-6 relative z-10">
+        <section className="py-24 px-12 relative z-10">
           <div className="container max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
+            <div className="flex flex-col items-center text-center gap-12 mb-16">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.94, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <h2 className="hero__title mb-6" style={{ fontSize: 'clamp(28px, 4.5vw, 42px)' }}>
+                  Our Core <span className="hero__title-accent">Values</span>
+                </h2>
+              </motion.div>
               <motion.div
                 className="relative"
                 initial={{ opacity: 0, scale: 0.94, y: 40 }}
@@ -255,37 +275,40 @@ export default function AboutUs({ navigate }) {
                 viewport={{ once: false, margin: "-100px" }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               >
-
-                <div className="glass-card" style={{ padding: '0', overflow: 'hidden', aspectRatio: '16/9', border: '2px solid var(--border)' }}>
+                <div className="glass-card mx-auto" style={{
+                  padding: '0',
+                  overflow: 'hidden',
+                  aspectRatio: '16/9',
+                  border: '2px solid var(--border)',
+                  maxWidth: 'min(600px, 95vw)',
+                  width: '100%',
+                  height: 'auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
                   <img
-                    src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg"
+                    src={coreValuesImage}
                     alt="Core Values Illustration"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7 }}
+                    style={{ width: '100%', height: 'auto', maxHeight: '340px', objectFit: 'contain', opacity: 1, display: 'block', margin: '0 auto' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg to-transparent opacity-60"></div>
                 </div>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, scale: 0.94, y: 40 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: false, margin: "-100px" }}
                 transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               >
-
-                <h2 className="hero__title text-center md:text-left mb-6" style={{ fontSize: 'clamp(28px, 4.5vw, 42px)' }}>
-                  Our Core <span className="hero__title-accent">Values</span>
-                </h2>
-
-                <div className="space-y-6 text-text2 text-lg leading-relaxed text-center md:text-left">
+                <div className="space-y-8 text-text2 text-lg leading-relaxed">
                   <p>
-                    At UniOne, our values guide every feature we build. We are committed to making engineering education clear, accessible, and smart.
+                    At UniOne, our values drive every decision and feature. We are dedicated to making engineering education accessible, efficient, and innovative for every student.
                   </p>
                   <p>
-                    We focus on providing the best resources and ethical AI tools to help every student succeed in their academic journey.
+                    We prioritize ethical AI, quality resources, and a student-first approach—ensuring you have the tools and support to excel in your academic journey and beyond.
                   </p>
                 </div>
-
               </motion.div>
             </div>
 
@@ -306,7 +329,7 @@ export default function AboutUs({ navigate }) {
                     <Icon n={v.icon} s={32} c={v.color} />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 font-['Syne'] text-text">{v.title}</h3>
-                  <p className="text-text2 leading-relaxed">
+                  <p className="text-text2 leading-relaxed mb-4">
                     {v.desc}
                   </p>
                 </motion.div>
@@ -314,9 +337,129 @@ export default function AboutUs({ navigate }) {
             </div>
           </div>
         </section>
+        <SectionDivider variant="line" />
 
-
+        {/* ══════════════════ WHY UNIONE SECTION ══════════════════ */}
+        <section className="py-24 px-12 relative z-10">
+          <div className="container max-w-6xl mx-auto">
+            <div className="flex flex-col items-center text-center gap-12 mb-16">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.94, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <h2 className="hero__title mb-6" style={{ fontSize: 'clamp(28px, 4.5vw, 42px)' }}>
+                  Why <span className="hero__title-accent">UniOne?</span>
+                </h2>
+              </motion.div>
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, scale: 0.94, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <div className="glass-card mx-auto" style={{
+                  padding: '0',
+                  overflow: 'hidden',
+                  aspectRatio: '16/9',
+                  border: '2px solid var(--border)',
+                  maxWidth: 'min(600px, 95vw)',
+                  width: '100%',
+                  height: 'auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <img
+                    src={whyImage}
+                    alt="Why UniOne Illustration"
+                    style={{ width: '100%', height: 'auto', maxHeight: '340px', objectFit: 'contain', opacity: 1, display: 'block', margin: '0 auto' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg to-transparent opacity-60"></div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.94, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <div className="space-y-8 text-text2 text-lg leading-relaxed">
+                  <p>
+                    UniOne is built for engineering students who want to maximize their learning, save time, and access the best resources in one place. Our platform combines free study materials, AI-powered tools, and exclusive features like digital student IDs and scholarship tracking.
+                  </p>
+                  <p>
+                    Whether you need instant answers, curated content packs, or updates for all 8+ engineering streams, UniOne is your all-in-one academic companion.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Example cards, you can expand or map from a data array for more reasons */}
+              <motion.div
+                className="glass-card group"
+                style={{ padding: '48px 32px', textAlign: 'center' }}
+                whileHover={{ y: -10 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0 * 0.1 }}
+              >
+                <div className="w-16 h-16 rounded-2xl mx-auto mb-8 flex items-center justify-center bg-surface2 border border-border group-hover:border-accent transition-colors" style={{ boxShadow: `0 0 20px #2F81F715` }}>
+                  <Icon n="book" s={32} c="#2F81F7" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 font-['Syne'] text-text">Free Study Resources</h3>
+                <p className="text-text2 leading-relaxed mb-4">
+                  Access notes, syllabus PDFs, and university announcements for all engineering streams at zero cost.
+                </p>
+              </motion.div>
+              <motion.div
+                className="glass-card group"
+                style={{ padding: '48px 32px', textAlign: 'center' }}
+                whileHover={{ y: -10 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1 * 0.1 }}
+              >
+                <div className="w-16 h-16 rounded-2xl mx-auto mb-8 flex items-center justify-center bg-surface2 border border-border group-hover:border-accent transition-colors" style={{ boxShadow: `0 0 20px #A371F715` }}>
+                  <Icon n="zap" s={32} c="#A371F7" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 font-['Syne'] text-text">AI Study Assistant</h3>
+                <p className="text-text2 leading-relaxed mb-4">
+                  Get instant answers to subject queries, exam strategies, and concept explanations — powered by AI.
+                </p>
+              </motion.div>
+              <motion.div
+                className="glass-card group"
+                style={{ padding: '48px 32px', textAlign: 'center' }}
+                whileHover={{ y: -10 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 2 * 0.1 }}
+              >
+                <div className="w-16 h-16 rounded-2xl mx-auto mb-8 flex items-center justify-center bg-surface2 border border-border group-hover:border-accent transition-colors" style={{ boxShadow: `0 0 20px #E3B34115` }}>
+                  <Icon n="star" s={32} c="#E3B341" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 font-['Syne'] text-text">Premium Content Packs</h3>
+                <p className="text-text2 leading-relaxed mb-4">
+                  Curated Lite, Medium & Premium packs with deep-dive notes, lab manuals, and mock tests.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      
+        <div style={{ margin: '3rem 0' }}>
+          <SectionDivider variant="line" />
+        </div>
       </main>
     </div>
   );
 }
+
+
+
